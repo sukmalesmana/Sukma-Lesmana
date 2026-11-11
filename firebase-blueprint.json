@@ -1,0 +1,49 @@
+{
+  "entities": {
+    "ClassSimulation": {
+      "title": "ClassSimulation",
+      "description": "State and real-time synchronization document for an Agency Wars class simulation",
+      "type": "object",
+      "properties": {
+        "activeCase": {
+          "type": "string",
+          "description": "ID of currently active case scenario (1-5)"
+        },
+        "timerRunning": {
+          "type": "boolean",
+          "description": "Whether the 60-minute countdown is currently running"
+        },
+        "absoluteStartTime": {
+          "type": "number",
+          "description": "Timestamp when timer was started or resumed"
+        },
+        "accumulatedPausedTime": {
+          "type": "number",
+          "description": "Total elapsed seconds before pause"
+        },
+        "decisions": {
+          "type": "object",
+          "description": "Submitted decisions map keyed by group ID (G1-G6)"
+        },
+        "studentProfiles": {
+          "type": "object",
+          "description": "Registered students profiles in this class"
+        },
+        "gmNotes": {
+          "type": "string",
+          "description": "Evaluation notes written by lecturer/game master"
+        },
+        "updatedAt": {
+          "type": "number",
+          "description": "Timestamp of last update"
+        }
+      }
+    }
+  },
+  "firestore": {
+    "/classes/{classId}": {
+      "schema": "ClassSimulation",
+      "description": "Collection storing real-time simulation state for each class room"
+    }
+  }
+}

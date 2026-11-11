@@ -1,0 +1,6 @@
+{
+  "name": "AGENCY WARS — Simulasi Akuntansi Keperilakuan",
+  "description": "Aplikasi role play interaktif pembelajaran akuntansi keperilakuan dan teori agensi untuk mahasiswa dan dosen.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
